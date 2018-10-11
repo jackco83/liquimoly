@@ -1,0 +1,102 @@
+.slider-main {
+  margin-top: 133px;
+
+  .slick-slide,
+  .slick-arrow {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-slide {
+    position: relative;
+
+    >div {
+      position: absolute;
+      top: 50%;
+      left: 19%;
+      width: 460px;
+      margin-top: -71px;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    z-index: 1;
+    font-size: 46px;
+    color: $colwhite;
+  }
+
+  .slick-prev {
+    left: 16%;
+  }
+
+  .slick-next {
+    right: 16%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 4px;
+    top: 50%;
+    left: 19%;
+    margin-top: 40px;
+
+    .slick-active {
+      button {
+        background: $colred;
+      }
+    }
+
+    li {
+      margin-right: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      text-indent: -9999px;
+      padding: 0;
+      border: 0;
+      background: $col32;
+      width: 70px;
+      height: 4px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  figure,
+  p {
+    margin: 0;
+  }
+
+  figure {
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    color: $colwhite;
+    background: rgba(50,50,50,.9);
+    font-family: 'DINPro-Bold';
+    font-size: 26px;
+    text-transform: uppercase;
+    display: inline;
+    padding: 10px 20px;
+    line-height: 51px;
+  }
+}

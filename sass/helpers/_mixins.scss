@@ -1,0 +1,24 @@
+@mixin transform($property) {
+    -webkit-transform: $property;
+        -ms-transform: $property;
+            transform: $property;
+}
+
+@mixin transition($property) {
+    -webkit-transition: $property;
+        -ms-transition: $property;
+            transition: $property;
+}
+
+@mixin appareance($property) {
+    -webkit-appearance: $property;
+    -moz-appearance: $property;
+    appearance: $property;
+}
+
+@mixin font-title {
+    font-family: 'DINPro';
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}

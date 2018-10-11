@@ -1,0 +1,276 @@
+.noticias {
+  padding: 40px 0 80px;
+
+  .cargar-mas {
+    background: $colred;
+    color: $colwhite;
+  }
+}
+
+.grid-noti {
+  margin-bottom: 50px;
+
+  .element-item {
+    font-family: 'DINPro';
+    font-size: 14px;
+    color: $col32;
+    width: 545px;
+    height: 612px;
+  
+    &.evento {
+      .categoria {
+        background: $colblue;
+      }
+    }
+  
+    &.noticia {
+      .categoria {
+        background: $colblack2;
+      }
+    }
+  
+    .fecha {
+      background: $colpur;
+      color: $colblack2;
+      font-size: 12px;
+      text-align: center;
+      width: 54px;
+      padding: 5px 0;
+      position: absolute;
+      left: 20px;
+      top: -34px;
+  
+      span {
+        display: table;
+        margin: 0 auto 2px;
+        padding-bottom: 4px;
+        font-size: 24px;
+        line-height: 24px;
+        border-bottom: 1px solid $colblack2;
+      }
+    }
+  
+    .categoria {
+      color: $colwhite;
+      text-align: center;
+      font-size: 12px;
+      line-height: 24px;
+      display: table;
+      width: 105px;
+      height: 24px;
+      padding: 0;
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+  
+    .btn-detalle {
+      color: $colblack2;
+
+      &:hover {
+        color: $colred;
+      }
+    }
+  
+    >a {
+      display: block;
+  
+      img {
+        max-width: 100%;
+      }
+    }
+  
+    >div {
+      position: relative;
+      padding-top: 56px;
+    }
+  
+    h2 {
+      font-size: 24px;
+      color: $colblack2;
+    }
+  }
+}
+
+.deta-noti {
+  font-family: 'DINPro';
+  font-size: 14px;
+  color: $col32;
+
+  .row {
+    margin-bottom: 80px;
+  }
+
+  .content {
+    justify-content: flex-end;
+    font-size: 14px;
+    color: $col32;
+
+    h2 {
+      font-family: 'DINPro';
+      font-size: 32px;
+      color: $colblack2;
+      margin-bottom: 40px;
+    }
+  
+    h3 {
+      font-family: 'DINPro';
+      color: $colpur;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .categoria {
+    color: $colwhite;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    display: table;
+    width: 105px;
+    height: 24px;
+    margin-bottom: 40px;
+  }
+
+  &.evento {
+    .categoria {
+      background: $colblue;
+    }
+  }
+
+  &.noticia {
+    .categoria {
+      background: $colblack2;
+    }
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.titular {
+  color: $col32;
+  font-family: 'DINPro-Bold';
+  font-size: 24px;
+  line-height: 26px;
+  margin: 80px 0 20px;
+  position: relative;
+  padding-left: 60px;
+
+  &::before {
+    content: '\f10d';
+    display: inline-block;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    color: $colpur;
+    font-size: 42px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+  }
+}
+
+.seguir-leyendo {
+  background: $cold8;
+  font-family: 'DINPro';
+  padding: 65px 0;
+
+  .cab {
+    margin-bottom: 45px;
+
+    .btn-detalle {
+      position: absolute;
+      right: 25px;
+      bottom: 0;
+    }
+
+    h2 {
+      color: $col32;
+      font-size: 48px;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-detalle {
+    color: $col32;
+    font-size: 14px;
+  }
+
+  
+}
+
+.articulo {
+  font-family: 'DINPro';
+  font-size: 14px;
+  color: $col32;
+
+  &.evento {
+    .categoria {
+      background: $colblue;
+    }
+  }
+
+  &.noticia {
+    .categoria {
+      background: $colblack2;
+    }
+  }
+
+  .fecha {
+    background: $colpur;
+    color: $colblack2;
+    font-size: 12px;
+    text-align: center;
+    width: 54px;
+    padding: 5px 0;
+    position: absolute;
+    left: 20px;
+    top: -34px;
+
+    span {
+      display: table;
+      margin: 0 auto 2px;
+      padding-bottom: 4px;
+      font-size: 24px;
+      line-height: 24px;
+      border-bottom: 1px solid $colblack2;
+    }
+  }
+
+  .categoria {
+    color: $colwhite;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    display: table;
+    width: 105px;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    left: 35px;
+    top: 20px;
+  }
+
+  >div {
+    position: relative;
+    padding-top: 56px;
+  }
+
+  >a {
+    display: block;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $colblack2;
+  }
+}

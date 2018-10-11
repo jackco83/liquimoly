@@ -1,0 +1,406 @@
+.main-header {
+  position: fixed;
+  z-index: 2;
+  background: $colwhite;
+  padding-bottom: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  h1 {
+    margin: 0;
+    display: table;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.menu-guia {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  font-family: 'DINPro-Bold';
+  font-size: 14px;
+
+  li {
+    width: 50%;
+
+    &:first-child {
+      a {
+        background: $colblue;
+
+        &:hover {
+          i {
+            animation-name: animDown;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        background: $colred;
+
+        &:hover {
+          i {
+            animation-name: animDown;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $colwhite;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+
+    i {
+      margin-right: 5px;
+      animation-duration: 1.5s;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.menu-sec {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'DINPro-Bold';
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $col4b;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $colred;
+      @include transition($transition05s);
+      @include transform(scaleX(0));
+    }
+
+    &.activo {
+      color: $colblue;
+
+      &::after {
+        background: $colblue;
+        @include transform(scaleX(1));
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::after {
+        @include transform(scaleX(1));
+      }
+    }
+  }
+}
+
+.menu-main {
+  font-family: 'DINPro-Bold';
+  font-size: 16px;
+  margin-top: 10px;
+  height: 100%;
+  overflow: hidden;
+
+  .submenu {
+    >a {
+      &::after {
+        content: '\f078';
+        display: inline-block;
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+        margin-left: 5px;
+      }
+    }
+
+    &:hover {
+      .lista-submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .lista-submenu {
+    background: url('../images/ico-vineta.png') $colblack2 20px -1px no-repeat;
+    position: absolute;
+    top: 93px;
+    width: 920px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    @include transition($transition03s);
+
+    >ul {
+      display: block;
+      margin: 0;
+      padding: 40px 0;
+      font-family: 'DINPro-Bold';
+      font-size: 20px;
+      width: 400px;
+
+      >li {
+        display: block;
+        margin: 0 0 20px;
+        padding-left: 30px;
+        position: relative;
+        @include transition($transition03s);
+
+        >a {
+          display: flex;
+          align-items: center;
+          height: 44px;;
+          color: $colwhite;
+          position: relative;
+  
+          span {
+            display: inline-block;
+            width: 100px;
+          }
+
+          &::after {
+            content: '\f105';
+            display: inline-block;
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 30px;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &:hover {
+          background: $col32;
+
+          .lista-submenu2 {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .lista-submenu2 {
+    background: $col32;
+    font-family: 'DINPro';
+    font-size: 20px;
+    list-style: none;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: -520px;
+    top: -40px;
+    width: 520px;
+    height: 510px;
+    @include transition($transition03s);
+
+    >li {
+      margin-bottom: 20px;
+
+      >a {
+        color: $colwhite;
+        height: 44px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .reg-menu {
+    display: none;
+  }
+
+  >ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+
+    >li {
+      margin-right: 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      >a {
+        color: $col32;
+        display: inline-block;
+
+        &.activo {
+          color: $colblue;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        >a {
+          text-decoration: none;
+          color: $colblue;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.buscar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+  input {
+    background: $colgray;
+    border: 0;
+    border-left: 2px solid $colblue;
+    height: 33px;
+    width: 100%;
+    font-family: 'DINPro';
+    font-size: 14px;
+    color: $colblack;
+    padding-left: 10px;
+    @include transition($transition03s);
+
+    &:focus {
+      outline: none;
+      background: $col4b;
+      color: $colwhite;
+
+      &+i {
+        background: $col4b;
+        color: $colwhite;
+      }
+    }
+  }
+
+  i {
+    background: $colgray;
+    height: 33px;
+    line-height: 33px;
+    width: 30px;
+    text-align: center;
+    @include transition($transition03s);
+  }
+}
+
+.ctbuscar {
+  background: $colblack2;
+  position: absolute;
+  top: 75px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $col32;
+      background: transparent;
+      padding: 10px;
+      @include transition($transition03s);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        color: $colad;
+        display: flex;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      figure {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+
+      div {
+        font-family: 'DINPro';
+        font-size: 14px;
+        color: $colad;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &:hover {
+        background: $colblack3;
+      }
+    }
+  }
+
+  h3 {
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    color: $colad;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 5px;
+    line-height: 18px;
+
+    &:last-child {
+      font-size: 12px;
+      margin-bottom: 0;
+      line-height: initial;
+    }
+  }
+}

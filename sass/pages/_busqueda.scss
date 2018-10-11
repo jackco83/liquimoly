@@ -1,0 +1,153 @@
+.text-busca {
+  color: $colwhite;
+  font-family: 'DINPro-Bold';
+  font-size: 48px;
+  position: relative;
+  padding-right: 60px;
+  border-bottom: 1px solid $colwhite;
+  margin-bottom: 50px;
+  margin-top: 70px;
+
+  input {
+    color: $colwhite;
+    display: block;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    height: 55px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  a {
+    color: $colwhite;
+    font-size: 40px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      color: $colwhite;
+      text-decoration: none;
+    }
+  }
+}
+
+.select-cat {
+  color: $colwhite;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    margin: 0 20px 0 0;
+  }
+}
+
+.wrap-select {
+  background: $cold8;
+  color: $colblack2;
+  font-family: 'DINPro';
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 33px;
+  padding: 0 10px;
+
+  .option-selected {
+    line-height: 33px;
+  }
+
+  &::after {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    content: '\f078';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 33px;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    top: 33px;
+    left: 0;
+    display: none;
+    z-index: 1;
+    background: $col32;
+    padding: 15px 15px 0;
+    list-style-type: none;
+    height: auto;
+    bottom: initial;
+    justify-content: initial;
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+
+    li {
+      color: $colwhite;
+      border-bottom: 1px solid $colblack2;
+      width: 100%;
+      margin: 0 0 8px;
+      padding: 0 0 8px;
+      display: flex;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        width: 60px;
+
+        img {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}
+
+.resultado-buscar {
+  background: $cold8;
+  padding: 50px 0;
+
+  .prod {
+    color: $colblack2;
+    display: flex;
+    border-bottom: 0;
+
+    .btn-detalle {
+      color: $colblack2;
+
+      &:hover {
+        color: $colred;
+      }
+    }
+
+    >div {
+      margin: 0 30px;
+    }
+
+    p {
+      height: initial;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 0;
+
+      img {
+        display: block;
+        max-width: initial;
+      }
+    }
+  }
+}

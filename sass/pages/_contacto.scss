@@ -1,0 +1,183 @@
+.contacto {
+  background: $colblack2;
+  padding: 20px 0 60px;
+}
+
+.listado-liquimoly {
+  color: $colpur;
+  font-family: 'DINPro';
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid $colpur;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    &:first-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      a {
+        display: block;
+
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    color: $colwhite;
+    font-family: 'DINPro-Bold';
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  a {
+    color: $colpur;
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  figure,
+  p {
+    margin: 0;
+  }
+}
+
+.ct-form {
+  color: $col32;
+  background: $colwhite;
+  font-family: 'DINPro';
+  font-size: 13px;
+  padding: 40px;
+
+  .campo {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  .col {
+    float: left;
+    width: 260px;
+    padding: 0;
+
+    &:last-child {
+      float: right;
+    }
+  }
+
+  .input {
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 6px;
+      top: 0;
+      line-height: 33px;
+    }
+  }
+
+  .check {
+    display: flex;
+
+    input {
+      margin-right: 5px;
+    }
+
+    label {
+      margin-bottom: 0;
+
+      a {
+        color: $col32;
+        font-family: 'DINPro-Bold';
+      }
+    }
+  }
+
+  .error {
+    display: block;
+    color: $colred;
+    font-family: 'DINPro';
+    font-size: 11px;
+  }
+
+  h2 {
+    font-family: 'DINPro-Bold';
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    color: $col32;
+    font-family: 'DINPro';
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  textarea {
+    background: $colpur;
+    border: 0;
+    width: 100%;
+    height: 78px;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    &[type="text"] {
+      background: $colpur;
+      border: 0;
+      width: 100%;
+      height: 33px;
+      padding-left: 24px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.enviado {
+  font-family: 'DINPro-Bold';
+  font-size: 16px;
+  text-align: center;
+  color: $colblack2;
+  padding: 20px 0 0;
+
+  i {
+    font-size: 18px;
+    color: $colblue;
+  }
+}

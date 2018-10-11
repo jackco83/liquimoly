@@ -1,0 +1,193 @@
+.accordion-prod {
+  color: $col32;
+  margin: 0 auto;
+  width: 100%;
+
+  .accordion-header {
+    border-bottom: 2px solid $colblue;
+    cursor: pointer;
+    padding: 10px 0;
+    font-family: 'DINPro-Bold';
+    font-size: 24px;
+    @include transition($transition03s);
+
+    &.activo {
+      border-bottom-color: transparent;
+      
+      &::before {
+        content: '\f146';
+        color: $colblack2;
+      }
+    }
+
+    &::before {
+      content: '\f0fe';
+      color: $colred;
+      font-family: 'Font Awesome\ 5 Free';
+      font-size: 28px;
+      font-weight: 900;
+      display: inline-block;
+      margin-right: 40px;
+      vertical-align: middle;
+      @include transition($transition03s);
+    }
+
+    &:hover {
+      &::before {
+        color: $colblack2;
+      }
+    }
+  }
+
+  .accordion-content {
+    display: none;
+    border-bottom: 2px solid $colblue;
+    padding: 0 65px 20px;
+    font-family: 'DINPro';
+    font-size: 14px;
+
+    b {
+      font-family: 'DINPro-Bold';
+    }
+
+    table {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      tr {
+        border-bottom: 1px solid $col32;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        td {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.accordion-solu {
+  background: $colwhite;
+  color: $colblack2;
+  padding: 20px 20px 25px;
+  height: 620px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .accordion-header {
+    border-bottom: 1px solid $colpur;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    position: relative;
+    @include transition($transition03s);
+
+    a {
+      color: $colblack2;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    span {
+      display: inline-block;
+      background: $colblue;
+      color: $colwhite;
+      border-radius: 100%;
+      text-align: center;
+      font-family: 'DINPro';
+      font-size: 12px;
+      line-height: 20px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 14px;
+    }
+
+    &.activo {
+      border-bottom-color: transparent;
+      
+      &::after {
+        content: '\f146';
+        color: $colblack2;
+      }
+    }
+
+    &::after {
+      content: '\f0fe';
+      color: $colblack2;
+      font-family: 'Font Awesome\ 5 Free';
+      font-size: 16px;
+      line-height: 46px;
+      font-weight: 900;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include transition($transition03s);
+    }
+
+    &:hover {
+      &::after {
+        color: $colblack2;
+      }
+    }
+  }
+
+  .accordion-content {
+    display: none;
+    background: $colpur;
+    color: $col32;
+    border-bottom: 1px solid $colpur;
+    padding: 20px 30px;
+    overflow: hidden;
+    font-family: 'DINPro';
+    font-size: 14px;
+
+    .colum {
+      float: left;
+      width: 50%;
+      margin-bottom: 20px;
+
+      &:first-child {
+        width: 147px;
+        margin-right: 20px;
+      }
+    }
+
+    figure {
+      margin-bottom: 6px;
+
+      img {
+        display: block;
+      }
+    }
+
+    h2,
+    h3 {
+      color: $colblack2;
+      margin-bottom: 5px;
+      font-family: 'DINPro-Bold';
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 12px;
+    }
+  }
+}

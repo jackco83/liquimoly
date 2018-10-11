@@ -1,0 +1,49 @@
+.guia {
+  padding: 50px 0;
+
+  iframe {
+    width: 100%;
+    border: 0;
+    height: 540px;
+    overflow-y: scroll;
+  }
+}
+
+.prod-rela {
+  background: $col32;
+  color: $colwhite;
+  padding: 50px 0;
+
+  .prod {
+    margin-bottom: 0;
+    border-bottom: 0;
+    display: flex;
+
+    >div {
+      margin: 0 30px;
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: initial;
+    }
+
+    h2 {
+      font-family: 'DINPro-Bold';
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    p {
+      height: initial;
+    }
+  }
+
+  h2 {
+    @include font-title;
+    text-align: left;
+  }
+}

@@ -1,0 +1,465 @@
+.soluciones-desktop {
+  background: $cold8;
+
+  .row {
+    >div {
+      >h2 {
+        background: $colwhite;
+        color: $col32;
+        font-family: 'DINPro-Bold';
+        font-size: 26px;
+        padding: 25px 20px 0;
+        margin-bottom: 0;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: $colpur;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.vehiculo {
+  .point {
+    background: $colblue;
+    color: $colwhite;
+    border: 2px solid $colwhite;
+    border-radius: 100%;
+    display: block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 24px;
+    font-family: 'DINPro';
+    font-size: 14px;
+    position: absolute;
+
+    &.activo {
+      background: $colred;
+    }
+
+    &.p1 {
+      top: 150px;
+      left: 100px;
+    }
+
+    &.p2 {
+      top: 226px;
+      left: 20px;
+    }
+
+    &.p3 {
+      top: 110px;
+      left: 590px;
+    }
+
+    &.p4 {
+      top: 160px;
+      left: 210px;
+    }
+
+    &.p5 {
+      top: 116px;
+      left: 110px;
+    }
+
+    &.p6 {
+      top: 130px;
+      left: 180px;
+    }
+
+    &.p7 {
+      top: 200px;
+      left: 150px;
+    }
+
+    &.p8 {
+      top: 50px;
+      left: 530px;
+    }
+
+    &.p9 {
+      top: 170px;
+      left: 50px;
+    }
+
+    &.p10 {
+      top: 170px;
+      left: 510px;
+    }
+
+    &.p11 {
+      top: 110px;
+      left: 290px;
+    }
+
+    &.p12 {
+      top: 210px;
+      left: 60px;
+    }
+
+    &.p13 {
+      top: 150px;
+      left: 144px;
+    }
+
+    &.p14 {
+      top: 190px;
+      left: 110px;
+    }
+
+    &.p15 {
+      top: 50px;
+      left: 600px;
+    }
+
+    &.p16 {
+      top: 180px;
+      left: 10px;
+    }
+
+    &.p17 {
+      top: 270px;
+      left: 150px;
+    }
+
+    &.p18 {
+      top: 50px;
+      left: 260px;
+    }
+
+    &:hover {
+      color: $colwhite;
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    color: $colblack2;
+    font-family: 'DINPro';
+    font-size: 32px;
+    margin: 25px 80px;
+  }
+
+  figure {
+    margin: 0;
+    position: relative;
+  }
+}
+
+.lyvideo {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  @include transition($transition03s);
+
+  &.activo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cerrar {
+    color: $colwhite;
+    font-size: 44px;
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+  }
+
+  iframe {
+    width: 95%;
+    height: 80%;
+    display: block;
+  }
+}
+
+.lydetalle {
+  background: $colgray;
+  position: absolute;
+  left: 110%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  @include transition($transition03s);
+
+  &.activo {
+    left: 0;
+  }
+
+  .regresar {
+    color: $colblack2;
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    line-height: 16px;
+    display: table;
+    margin-bottom: 20px;
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .content {
+    display: block;
+    height: auto;
+  }
+
+  >h2 {
+    color: $colblack2;
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+    margin: 0 0 20px;
+
+    span {
+      background: $colblue;
+      color: $colwhite;
+      font-family: 'DINPro';
+      font-size: 12px;
+      text-align: center;
+      line-height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+    }
+  }
+}
+
+.ctcolum {
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .colum {
+    float: left;
+
+    figure {
+      margin: 0;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+    
+    &:first-child {
+      width: 25%;
+      margin-right: 2%;
+    }
+
+    &:last-child {
+      width: 73%;
+    }
+  }
+}
+
+.ctcolum,
+  .content {
+    color: $col32;
+    font-family: 'DINPro';
+    font-size: 12px;
+    
+    h2,
+    h3,
+    p {
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      color: $colblack2;
+      font-family: 'DINPro-Bold';
+      font-size: 14px;
+    }
+
+    h3 {
+      color: $colblack2;
+      font-family: 'DINPro-Bold';
+      font-size: 12px;
+    }
+  }
+
+.soluciones-movil {
+  display: none;
+  overflow: hidden;
+
+  .tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $colpur;
+    font-family: 'DINPro-Bold';
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+
+    .tab-link {
+      cursor: pointer;
+      width: 50%;
+      border-bottom: 1px solid $colpur;
+
+      &.current {
+        color: $colblack2;
+        border-bottom: 1px solid $colblack2;
+      }
+    }
+  }
+
+  .tab-container {
+    padding: 60px 0;
+    position: relative;
+    display: none;
+
+    .point {
+      background: $colblue;
+      color: $colwhite;
+      border: 2px solid $colwhite;
+      border-radius: 100%;
+      display: block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 26px;
+      font-family: 'DINPro';
+      font-size: 16px;
+      position: absolute;
+
+      &.activo {
+        background: $colred;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.p1 {
+        top: 110px;
+        left: 90px;
+      }
+
+      &.p2 {
+        top: 120px;
+        left: 20px;
+      }
+
+      &.p3 {
+        top: 100px;
+        left: 150px;
+      }
+
+      &.p4 {
+        top: 60px;
+        left: 160px;
+      }
+
+      &.p5 {
+        top: 80px;
+        left: 50px;
+      }
+
+      &.p6 {
+        top: 60px;
+        left: 100px;
+      }
+
+      &.p7 {
+        top: 160px;
+        left: 60px;
+      }
+
+      &.p8 {
+        top: 150px;
+        left: 180px;
+      }
+
+      &.p9 {
+        top: 80px;
+        left: 210px;
+      }
+
+      &.p10 {
+        top: 180px;
+        left: 90px;
+      }
+
+      &.p11 {
+        top: 130px;
+        left: 30px;
+      }
+
+      &.p12 {
+        top: 90px;
+        left: 230px;
+      }
+
+      &.p13 {
+        top: 120px;
+        left: 140px;
+      }
+
+      &.p14 {
+        top: 140px;
+        left: 270px;
+      }
+
+      &.p15 {
+        top: 70px;
+        left: 190px;    
+      }
+
+      &.p16 {
+        top: 50px;
+        left: 150px;
+      }
+
+      &.p17 {
+        top: 160px;
+        left: 130px;
+      }
+
+      &.p18 {
+        top: 130px;
+        left: 200px;
+      }
+    }
+    
+    &.current {
+      display: block;
+    }
+
+    >figure {
+      margin: 0 auto;
+      display: table;
+      position: relative;
+
+      img {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@keyframes animDown {
+  0% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+  20% {
+    @include transform(translateY(30px));
+    opacity: 0;
+  }
+  21% {
+    @include transform(translateY(25px));
+    opacity: 0;
+  }
+  22% {
+    @include transform(translateY(-30px));
+    opacity: 0;
+  }
+  23% {
+    @include transform(translateY(-25px));
+    opacity: 0;
+  }
+  43% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}
+
+@keyframes animMenuDown {
+  0% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+  20% {
+    @include transform(translateY(50px));
+    opacity: 1;
+  }
+  21% {
+    @include transform(translateY(55px));
+    opacity: 0;
+  }
+  22% {
+    @include transform(translateY(-25px));
+    opacity: 0;
+  }
+  23% {
+    @include transform(translateY(-20px));
+    opacity: 1;
+  }
+  43% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}

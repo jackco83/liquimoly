@@ -1,0 +1,151 @@
+.deta-empresa {
+  background: $cold8;
+  color: $col32;
+  font-family: 'DINPro';
+  font-size: 14px;
+  padding: 100px 0 62px;
+
+  .content {
+    color: $col32;
+    font-family: 'DINPro';
+    font-size: 14px;
+    
+    h2 {
+      @include font-title;
+      text-align: left;
+      color: $colblue;
+      line-height: 48px;
+      margin-bottom: 20px;
+    }
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.best-brand {
+  background: $colblack2;
+  color: $colwhite;
+  padding: 70px 0;
+  font-family: 'DINPro';
+  font-size: 14px;
+
+  .row {
+    >div {
+      &:last-child {
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  h2 {
+    color: $colred;
+    font-family: 'DINPro-Bold';
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: 'DINPro-Bold';
+    font-size: 28px;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '\f10d';
+      display: inline-block;
+      font-family: 'Font Awesome\ 5 Free';
+      font-weight: 900;
+      position: absolute;
+      color: $colblue;
+      font-size: 60px;
+      top: -30px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  h4 {
+    font-size: 12px;
+    text-align: center;
+    color: $colpur;
+    margin: 0;
+
+    span {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 4px;
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: $colred;
+        display: block;
+        margin: 4px auto 0;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.firma {
+  margin: 50px 0 10px;
+}
+
+.texto-firma {
+  span {
+    display: block;
+    font-size: 12px;
+  }
+}
+
+.img-brand {
+  position: relative;
+  display: table;
+  margin-bottom: 50px;
+
+  img {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 282px;
+    height: 98px;
+  }
+
+  &::before {
+    background: $colblue;
+    height: 282px;
+    width: 98px;
+    right: -10px;
+    top: -10px;
+  }
+
+  &::after {
+    background: $colred;
+    left: -10px;
+    bottom: -10px;
+  }
+}
